@@ -10,7 +10,7 @@ export const AutosubmitChangeAttribute = "data-autosubmit-change";
 
 export class AutosubmitPlugin implements DatagridPlugin {
 	onDatagridInit(datagrid: Datagrid): boolean {
-		datagrid.ajax.addEventListener('complete', (event) => {
+		datagrid.ajax.addEventListener('complete', () => {
 			this.initPerPage(datagrid);
 			this.initChange(datagrid);
 		});

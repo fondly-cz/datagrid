@@ -48,7 +48,7 @@ export class SortableJS implements SortableInterface {
 			new Sortable(el, {
 				handle: '.handle-sort',
 				draggable: '.datagrid-tree-item:not(.datagrid-tree-header)',
-				async onEnd({item}) {
+				async onEnd({}) {
 					// TODO
 				},
 			})

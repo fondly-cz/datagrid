@@ -1,9 +1,9 @@
 import { DatagridPlugin } from "../../types";
 import { isEnter } from "../../utils";
-import { Datagrid, Datagrids } from "../..";
+import { Datagrid } from "../..";
 
 export class InlinePlugin implements DatagridPlugin {
-	onInit(datagrids: Datagrids) {
+	onInit() {
 	}
 
 	onDatagridInit(datagrid: Datagrid): boolean {

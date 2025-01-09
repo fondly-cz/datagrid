@@ -15,6 +15,7 @@ import { DatepickerPlugin } from "./plugins/integrations/datepicker";
 import { BootstrapSelect, Happy, VanillaDatepicker } from "./integrations";
 
 export class Datagrids {
+	/** @ts-ignore */
 	private datagrids: Datagrid[] = [];
 
 	readonly options: DatagridsOptions;

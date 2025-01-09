@@ -9,12 +9,10 @@ export class ItemDetailPlugin implements DatagridPlugin {
 				const toggleId = el.getAttribute("data-toggle-detail")!;
 
 
-				el.addEventListener("click", (e) => {
+				el.addEventListener("click", () => {
 					const contentRow = datagrid.el.querySelector<HTMLElement>(
 						`.item-detail-${datagrid.name}-id-${toggleId}`
 					);
-
-					const gridRow = el.closest('tr');
 
 					if (contentRow) {
 						// const div = contentRow.querySelector<HTMLDivElement>("td > div");

@@ -3,7 +3,7 @@ import { Datagrid } from "../..";
 
 export class TreeViewPlugin implements DatagridPlugin {
 	onDatagridInit(datagrid: Datagrid): boolean {
-		datagrid.ajax.addEventListener("before", (e) => {
+		datagrid.ajax.addEventListener("before", () => {
 		})
 
 		datagrid.ajax.addEventListener("success", ({detail: {payload}}) => {
@@ -25,8 +25,6 @@ export class TreeViewPlugin implements DatagridPlugin {
 
 						childrenBlock.innerHTML = template;
 					}
-					//children_block.addClass('loaded');
-					//children_block.slideToggle('fast');
 				}
 			}
 		})

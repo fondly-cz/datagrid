@@ -91,9 +91,13 @@ export class Datagrid extends EventTarget {
 					)
 
 					/// tf?
-					for (const columnName of payload.non_empty_filters) {
+					// for (const columnName of payload.non_empty_filters) {
+					// 	resets.find(getColumnName)?.classList.remove("hidden");
+					// }
+
+					payload.non_empty_filters.forEach(() => {
 						resets.find(getColumnName)?.classList.remove("hidden");
-					}
+					})
 
 					const href = this.el.querySelector(".reset-filter")
 						?.getAttribute("href");

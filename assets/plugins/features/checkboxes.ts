@@ -5,7 +5,7 @@ export const CheckboxAttribute = "data-check";
 
 export class CheckboxPlugin implements DatagridPlugin {
 	onDatagridInit(datagrid: Datagrid): boolean {
-		let lastCheckbox = null;
+		let lastCheckbox: HTMLElement;
 
 		datagrid.el.addEventListener("click", e => {
 			if (!(e.target instanceof HTMLElement)) return;

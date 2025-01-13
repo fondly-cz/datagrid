@@ -127,7 +127,7 @@ export class Datagrid extends EventTarget {
 
 	dispatch<
 		K extends string, M extends DatagridEventMap = DatagridEventMap
-	>(type: K, detail: K extends keyof M ? EventDetail<M[K]> : any, options?: boolean): boolean {
+	>(type: K, detail: K extends keyof M ? EventDetail<M[K]> : any): boolean {
 		return this.dispatchEvent(new CustomEvent(type, {detail}));
 	}
 
